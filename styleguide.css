@@ -1,0 +1,16 @@
+
+.colorOne {
+  width: 330px;
+  height: 100px;
+  background-color: #e74c3c;
+  font-family: times, serif;
+  color: #e74c3c;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline-block;
+};
+#colorTwo {
+  color: red;
+}
