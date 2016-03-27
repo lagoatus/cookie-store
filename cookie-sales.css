@@ -1,0 +1,19 @@
+
+html {background-color: white;}
+div {
+  background-color: #eeeeee;
+  display: inline-block;
+  border: ;
+
+}
+#cook {color: #303D45;}
+section {
+  align-items: center;
+  background-color: #eeeeee;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  -moz-box-shadow: 5px 5px 5px #777777;
+  -webkit-box-shadow: 5px 5px 5px #777777;
+  box-shadow: 5px 5px 5px #777777;}

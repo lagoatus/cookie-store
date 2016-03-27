@@ -3,24 +3,39 @@
   <head>
     <title>
     </title>
+
+    <link href="cookie-sales.css" type="text/css" rel="stylesheet"/>
+
   </head>
+  <h1 id="cook">Cookie Shop</h1>
   <body>
-    <h1>Cookie Shop</h1>
-    <h3>Portland Airport Food Cart</h3>
-      <ul id="pdxSales">
-      </ul>
+    <section align="center">
+    <div align="center">
+       <h3>PDX Food Cart</h3>
+        <ul id="pdxSales">
+        </ul>
+    </div>
+    <div align="center">
     <h3>Sellwood Store</h3>
       <ul id="sellwoodSales">
       </ul>
-    <h3>Washington Square Food Cart</h3>
+    </div>
+    <div align="center">
+    <h3>Washington Sq. Shop</h3>
       <ul id="washingtonSquareSales">
       </ul>
+    </div>
+    <div align="center">
     <h3>Pearl District Store</h3>
       <ul id="pearlDistrictSales">
       </ul>
-    <h3>Pioneer Square Food Cart</h3>
+    </div>
+    <div align="center">
+    <h3>Pioneer Square Cart</h3>
       <ul id="pioneerSquareSales">
       </ul>
+    </div>
+  </section>
 
   </body>
   <script type="text/javascript">
@@ -43,7 +58,7 @@ var hours = ["10:00 am: ","11:00 am:","12:00 pm: ","1:00 pm: ","2:00 pm: ","2:00
 function hourlySales (shop) {
   for (var index = 0; index < hours.length; index++){
     var randomNum = Math.floor(((Math.random() * (shop.maxSales - shop.minSales)) + shop.minSales) * shop.averageSales);
-    document.getElementById(shop.Id).innerHTML += "<li>" +hours[index]+randomNum+"</li>"
+    document.getElementById(shop.Id).innerHTML += "<li>" +hours[index]+" Cookies Sold..."+randomNum+"</li>"
   }
 }
 var stores = new Array();
