@@ -7,8 +7,8 @@
     <link href="cookie-sales.css" type="text/css" rel="stylesheet"/>
 
   </head>
-  <h1 id="cook">Cookie Shop</h1>
   <body>
+      <h1 id="cook">THE COOKIE SHOP</h1>
     <section align="center">
     <div align="center">
        <h3>PDX Food Cart</h3>
@@ -61,10 +61,9 @@ function hourlySales (shop) {
   for (var index = 0; index < hours.length; index++){
     var randomNum = Math.floor(((Math.random() * (shop.maxSales - shop.minSales)) + shop.minSales) * shop.averageSales);
     total += randomNum;
-    document.getElementById(shop.Id).innerHTML += "<li>" +hours[index]+" Cookies Sold..."+randomNum+"</li>";
-
+    document.getElementById(shop.Id).innerHTML += "<li>" +hours[index]+" "+randomNum+"</li>";
   }
-    document.getElementById(shop.Id).innerHTML += "<li>Total Cookies Sold: "+total+"</li>";
+    document.getElementById(shop.Id).innerHTML += "<li>Total: "+total+"</li>";
     console.log(total);
 }
 var stores = new Array();
@@ -77,28 +76,6 @@ stores.push(pearlDistrict);
 for (var index = 0; index < stores.length; index++){
   hourlySales(stores[index])
 }
-
-// function pioneerSquareHourlySales () {
-//       // debugger;
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML = "<ul><li> 10:00 AM: "+randomNum+"</li></ul>"
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML += "<ul><li> 11:00 AM: "+randomNum+"</li></ul>"
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML += "<ul><li> 12:00 AM: "+randomNum+"</li></ul>"
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML += "<ul><li> 1:00 PM: "+randomNum+"</li></ul>"
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML += "<ul><li> 2:00 PM: "+randomNum+"</li></ul>"
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML += "<ul><li> 3:00 PM: "+randomNum+"</li></ul>"
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML += "<ul><li> 4:00 PM: "+randomNum+"</li></ul>"
-//       var randomNum = Math.floor(((Math.random() * (pioneerSquare.maxSales - pioneerSquare.minSales)) + pioneerSquare.minSales) * pioneerSquare.averageSales);
-//       document.getElementById("pioneerSquareSales").innerHTML += "<ul><li> 5:00 PM: "+randomNum+"</li></ul>"
-//       }
-// pioneerSquareHourlySales()
-
 
   </script>
 </html>
