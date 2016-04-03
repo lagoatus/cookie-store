@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+    </title>
+  </head>
+  <body>
+    <h1>Cookie Shop</h1>
+    <h3>Portland Airport Food Cart</h3>
+      <p id="pdxSales">
+      </p>
+    <h3>Sellwood Store</h3>
+      <p id="sellwoodSales">
+      </p>
+    <h3>Washington Square Food Cart</h3>
+      <p id="washingtonSquareSales">
+      </p>
+    <h3>Pearl District Store</h3>
+      <p id="pearlDistrictSales">
+      </p>
+    <h3>Pioneer Square Food Cart</h3>
+      <p id="pioneerSquareSales">
+      </p>
+
+
+
+  </body>
+  <script type="text/javascript">
+  // console.log("It works!");
+  // var portlandAirport = {
+  //   minSales: 6,
+  //   maxSales: 24,
+  //   averageSales: 1.2,
+  // };
+  function salesLocation (minSales, maxSales, averageSales, averageSales, salesLoc, hours, cookies, totalCookies, locationID, pdxHourlySales) {
+    this.minSales = minSales;
+    this.maxSales = maxSales;
+    this.averageSales = averageSales;
+    this.salesLoc = 'name';
+    this.hours =  [8];
+    this.cookies: [];
+    this.totalCookies = 0;
+    this.locationID = '',
+    this.pdxHourlySales = function() {
+          var randomNum = Math.floor(((Math.random() * (this.maxSales - this.minSales)) + this.minSales) * this.averageSales);
+          };
+
+var portlandAirport = new salesLocation (6, 24, 1.2, 'pdx', [8], [], 0, 'pdxSales');
+var washingtonSquare = new salesLocation (11, 38, 1.9, 'Washington Square', [8], [], 0, 'washingtonSquareSales');
+var sellwood = new salesLocation (20, 48, 3.3, 'sellwood', [8], [], 0, 'sellwoodSales');
+var pearlDistrict = new salesLocation (3, 24, 2.6, 'Pearl District', [8], [], 0, 'pearlDistrictSales');
+var pioneerSquare = new salesLocation (17, 88, 5.2, 'Pioneer Square', [8], [], 0, 'pioneerSquareSales');
+
+var nameloop = for()
+
+document.getElementById("this.locationID").innerHTML = "<ul><li>" +this.pdxHourlySales+ "</li></ul>"
+
+
+
+var stores = new Array();
+stores.push(portlandAirport);
+stores.push(sellwood);
+stores.push(washingtonSquare);
+stores.push(pioneerSquare);
+stores.push(pearlDistrict);
+
+
+  </script>
+</html>
