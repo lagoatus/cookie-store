@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      * {text-align: center;
+
+
+        font-family: sans-serif;
+        background-color: white;
+      }
+      table, tr, td {
+        border: 1px solid black;
+      }
+    </style>
     <title>
     </title>
+
+    <!-- <link href="cookie-sales.css" type="text/css" rel="stylesheet"/> -->
+
   </head>
   <body>
-    <h1>Cookie Shop</h1>
-    <h3>Portland Airport Food Cart</h3>
-      <p id="pdxSales">
-      </p>
-    <h3>Sellwood Store</h3>
-      <p id="sellwoodSales">
-      </p>
-    <h3>Washington Square Food Cart</h3>
-      <p id="washingtonSquareSales">
-      </p>
-    <h3>Pearl District Store</h3>
-      <p id="pearlDistrictSales">
-      </p>
-    <h3>Pioneer Square Food Cart</h3>
-      <p id="pioneerSquareSales">
-      </p>
-
-
+      <h1 id="cook">THE COOKIE SHOP</h1>
+    <table>
+      <tbody id="table">
+      </tbody>
+    </table>
 
   </body>
   <script type="text/javascript">
-  // console.log("It works!");
-  // var portlandAirport = {
-  //   minSales: 6,
-  //   maxSales: 24,
-  //   averageSales: 1.2,
-  // };
-  function salesLocation (minSales, maxSales, averageSales, averageSales, salesLoc, hours, cookies, totalCookies, locationID, pdxHourlySales) {
+  function salesLocation (minSales, maxSales, averageSales, Id) {
     this.minSales = minSales;
     this.maxSales = maxSales;
     this.averageSales = averageSales;
-    this.salesLoc = 'name';
-    this.hours =  [8];
-    this.cookies: [];
-    this.totalCookies = 0;
-    this.locationID = '',
-    this.pdxHourlySales = function() {
-          var randomNum = Math.floor(((Math.random() * (this.maxSales - this.minSales)) + this.minSales) * this.averageSales);
-          };
-
-var portlandAirport = new salesLocation (6, 24, 1.2, 'pdx', [8], [], 0, 'pdxSales');
-var washingtonSquare = new salesLocation (11, 38, 1.9, 'Washington Square', [8], [], 0, 'washingtonSquareSales');
-var sellwood = new salesLocation (20, 48, 3.3, 'sellwood', [8], [], 0, 'sellwoodSales');
-var pearlDistrict = new salesLocation (3, 24, 2.6, 'Pearl District', [8], [], 0, 'pearlDistrictSales');
-var pioneerSquare = new salesLocation (17, 88, 5.2, 'Pioneer Square', [8], [], 0, 'pioneerSquareSales');
-
-var nameloop = for()
-
-document.getElementById("this.locationID").innerHTML = "<ul><li>" +this.pdxHourlySales+ "</li></ul>"
-
-
+    this.Id = Id;
+    this.storeHours = ["10:00 am ","11:00 am","12:00 pm ","1:00 pm ","2:00 pm ","2:00 pm ","3:00 pm ", "4:00 pm ", "5:00 pm"];
+    this.randomNumFunction = function() { // Creates Random sells with min max range.
+      return Math.floor(((Math.random() * (this.maxSales - this.minSales)) + this.minSales) * this.averageSales);
+    };
+};
+//TODO:Fix table to makes rows not columns
+//storeRow += "<tr><th>"+shop.Id+"</th>";
+function hourlySales (shop) {
+  var total = 0;
+  var table = document.getElementById('table');
+  var cell = table.getElementsByTagName("tbody");
+  //var hd = "<tr><th>"+shop.Id+"</th>"
+  var storeName = table.innerHTML += "<tr><th>"+shop.Id+"</th>";
+  for (var index = 0; index < shop.storeHours.length; index++){
+    var storeRow = ""; // declaring var. to use below.
+    var randomNum = shop.randomNumFunction();
+    total += randomNum; // ADD random numbers for total.
+    //storeRow += hd;
+    storeRow = "<td>"+shop.storeHours[index]+"</td><td>"+randomNum+"</td>";
+    table.innerHTML += storeRow;
+  }
+  table.innerHTML += "<td> Total: "+total+"</td></tr>";
+}
+  // table.innerHTML += "Total:  "+total+"</tr><br>";
+  //   document.getElementById(shop.Id).innerHTML += "<li>" +shop.storeHours[index]+" "+randomNum+"</li>";
+  // }
+  //   document.getElementById(shop.Id).innerHTML += "<li>Total: "+total+"</li>";
+    // console.log(total);
 
 var stores = new Array();
-stores.push(portlandAirport);
-stores.push(sellwood);
-stores.push(washingtonSquare);
-stores.push(pioneerSquare);
-stores.push(pearlDistrict);
+stores.push(new salesLocation(6, 24, 1.2, "Portland Airport"));
+stores.push(new salesLocation(11, 38, 1.9, "Washington Square"));
+stores.push(new salesLocation(20, 48, 3.3, "Sellwood"));
+stores.push(new salesLocation(3, 24, 2.6, "Pearl District"));
+stores.push(new salesLocation(17, 88, 5.2, "Pioneer Square"));
 
-
+for (var index = 0; index < stores.length; index++){ // Calling function with parameter.
+  hourlySales(stores[index])
+}
   </script>
 </html>
