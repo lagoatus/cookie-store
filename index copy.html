@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookies with Salmon
+    </title>
+
+  <link href="salmcss.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img id="image1" src="pyramid.png">
+        <h5>PYRAMID COOKIES <span id="motto"> | The Top of the Food Chain<span></h5>
+      </div>
+      <div class="menu"><a href="#">HOME</a>|<a id="link2" href="javascript:display('show', 2)">ADD LOCATION</a>|<a id="link3" href="javascript:display1('show', 3)">SALES ESTIMATOR</a>|<a href="#">MENU</a>|<a href="#">LOCATIONS</a>|<a href="#">CONTACT</a>
+      </div>
+    </div>
+    <div class="div1">
+        <div id="maindiv">
+            <img id="image2" src="DF food pyramid.png">
+        <p class="mainp">What's at the top of the food Pyramid? Well, what your doctor didn't tell you is that one
+          of Pyramid's special Salmon-cookies contain all of the ingrediants of a heart healthy diet.
+          There's nothing fishy about this product, except the salmon. So climb your way to the top of food chain with a daily regiment of Salmon-cookies.<br><br>
+          Welcome to the apex of the cookie-dom! With your first taste of these rich, meaty treats you have opened the door to cookie enlightment.
+          Before we say more our attorneys have advised us to inform of a few of the hazards of Salmon-cookies. A sudden stop of salmon-cookies in your daily diet may cause severe itching...
+       </div>
+    </div>
+    <form id="submenu2" style="display:none">
+      <label for="loc"> Location Name:</label>
+      <input type="text" name="locName" id="locationName"/><br>
+      <label for="maxSales">Max Customers:</label>
+      <input type="text" name="maxSales"/><br>
+      <label for="minSales">Min Customers:</label>
+      <input type="text" name="minSales"/><br>
+      <label for="averageSales">Average Sales:</label>
+      <input type="text" name="averageSales"/><br>
+      <input type="button" value="Submit" onclick="addNewStore(this.form)"/>
+    </form>
+
+<!--
+   <input type="button" value="Add Store" onclick="showMessage()"> -->
+    <!-- <input type="button" value="Click button" onclick="alert(this.value)"> -->
+  <div id="submenu3">
+    <table>
+      <tbody id="table">
+      </tbody>
+    </table>
+  </div>
+  </body>
+<script type="text/javascript" src="salmjs.js"></script>
+</html>
